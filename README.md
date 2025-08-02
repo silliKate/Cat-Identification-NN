@@ -1,6 +1,6 @@
 # Cat Identification Neural Network
 
-Cat-Identification-NN is a simple neural network built using logistic regression that classifies whether an image contains a cat or not. It currently achieves an accuracy of approximately 70% on a basic dataset. This project serves as a foundational step toward building more complex image classification systems.
+Cat-Identification-NN is a simple neural network built using logistic regression and gradient descent algorithm that classifies whether an image contains a cat or not. It currently achieves an accuracy of approximately 70% on a basic dataset. This project serves as a foundational step toward building more complex image classification systems.
 
 
 ## Detailed Overview
