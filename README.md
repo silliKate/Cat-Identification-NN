@@ -38,7 +38,8 @@ The trained params "w" (weight) and "b" (bias) are stored in `model_params.npz`
 ### Long-Term:
 1. Extend classification to multiple animal species (and possibly plants too!)
 2. Integrate with an API to fetch factual information about the identified animal
-3. Add support fro AR and Android/iOS
+3. Add real-time object recognition via camera
+4. Add support for Android/iOS
 
 
 ## Contributing
