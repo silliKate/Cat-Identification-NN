@@ -1,6 +1,6 @@
 # Cat Identification Neural Network
 
-Cat-Identification-NN is a simple neural network built using logistic regression and gradient descent algorithm that classifies whether an image contains a cat or not. It currently achieves an accuracy of approximately 70% on a basic dataset. This project serves as a foundational step toward building more complex image classification systems.
+Cat-Identification-NN is a simple 2-layer neural network built using gradient descent algorithm that classifies whether an image contains a cat or not. It currently achieves an accuracy of approximately 70% on a basic dataset. This project serves as a foundational step toward building more complex image classification systems.
 
 
 ## Detailed Overview
@@ -23,10 +23,16 @@ The trained params "w" (weight) and "b" (bias) are stored in `model_params.npz`
    ```
    
 3. Place the images in the `images/` folder
-2. Run the program using
+4. Run the program using
    
    ```
-   python main.py
+   python test.py
+   ```
+   
+5. If you wish to re-train the model, then use
+
+   ```
+   python train.py
    ```
 
 ## Future Goals
