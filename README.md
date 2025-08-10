@@ -35,7 +35,7 @@ The trained params "w" (weight) and "b" (bias) are stored in `model_params.npz`
    python train.py
    ```
 
-## Future Goals
+## Future Vision
 ### Short-Term:
 1. Add more nodes and hidden layers to improve performance
 2. Expand and balance the training dataset for better generalization
