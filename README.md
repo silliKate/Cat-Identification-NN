@@ -34,6 +34,12 @@ The trained params "w" (weight) and "b" (bias) are stored in `model_params.npz`
    ```
    python train.py
    ```
+   
+6. To convert cat images in 'train_images/cats' to a '.h5' file, run
+   
+   ```
+   python data.py
+   ```
 
 ## Future Vision
 ### Short-Term:
