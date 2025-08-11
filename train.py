@@ -1,25 +1,33 @@
 import numpy as np
 import h5py
 
+"""
 # loading train data
 with h5py.File('data/train.h5', 'r') as tr:
         train_set_x_orig = np.array(tr["train_set_x"][:])
         train_set_y = np.array(tr["train_set_y"][:]).reshape(1, -1)
+"""
+
+with h5py.File("data/train_cats_only.h5", "r") as tr:
+    train_set_x_orig = np.array(tr["train_set_x"][:])
+    train_set_y_orig = np.array(tr["train_set_y"][:])
 
 # loading test data
 with h5py.File('data/test.h5', 'r') as ts:
     test_set_x_orig = np.array(ts["test_set_x"][:])
     test_set_y = np.array(ts["test_set_y"][:]).reshape(1, -1)
 
+train_set_x = train_set_x_orig.reshape(train_set_x_orig.shape[0], -1).T  # (12288, m)
+train_set_y = train_set_y_orig.reshape(1, -1)  # (1, m)
+
 # flattening input data
-train_set_x = train_set_x_orig.reshape(train_set_x_orig.shape[0], -1).T / 255
+# train_set_x = train_set_x_orig.reshape(train_set_x_orig.shape[0], -1).T / 255
 test_set_x = test_set_x_orig.reshape(test_set_x_orig.shape[0], -1).T / 255
 
 
 def sigmoid(z):
     # z is a scalar or numpy array of any size.
 
-    # z = np.clip(z, -700, 700)
     s = 1 / (1 + np.exp(-z))
     return s
 
@@ -162,7 +170,7 @@ def predict(parameters, X):
     
     return predictions
 
-nn_model(train_set_x, train_set_y, n_h = 20, num_iterations = 20000, learning_rate = 0.01, print_cost=True)
+nn_model(train_set_x, train_set_y, n_h = 5, num_iterations = 10000, learning_rate = 0.012, print_cost=True)
 
 cache = np.load("model_params.npz")
 parameters = {"W1": cache["W1"], "b1": cache["b1"], "W2": cache["W2"], "b2": cache["b2"]}
