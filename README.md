@@ -1,6 +1,6 @@
-# Cat Identification Neural Network
+# Image Identification Neural Network
 
-Cat-Identification-NN is a simple 2-layer neural network built using gradient descent algorithm that classifies whether an image contains a cat or not. It currently achieves an accuracy of approximately 70% on a basic dataset. This project serves as a foundational step toward building more complex image classification systems.
+It is a simple 2-layer shallow neural network built using gradient descent algorithm (for now, it can only classify whether an image contains a cat or not). It currently achieves an accuracy of approximately 70% on a basic dataset. This project serves as a foundational step toward building more complex image classification systems.
 
 
 ## Detailed Overview
